@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  firebase-emulator:
+    image: my-firebase-emulator:0.1.13
+    expose:
+      - "9099" # auth
+      - "8080" # firestore
+      - "9000" # realtime database
+    command: ./emulate.sh -o auth,firestore,database
